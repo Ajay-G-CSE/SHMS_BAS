@@ -1256,10 +1256,10 @@ hms-frontend/
 │   │   │   │   ├── ActionBlock.jsx
 │   │   │   │   ├── RuleCanvas.jsx
 │   │   │   │   └── RulePreview.jsx
-│   │   │
+   │   │
 │   │   │   └── report-engine/
 │   │   │       ├── ReportDesigner.jsx--
-│   │   │       ├── ReportCanvas.jsx
+│   │   │       ├──│ ReportCanvas.jsx
 │   │   │       ├── PlaceholderPicker.jsx
 │   │   │       └── ReportPreview.jsx
 │   │
@@ -1272,10 +1272,17 @@ hms-frontend/
 │   │       │   ├── MasterData.jsx
 │   │       │   ├── WardBedManagement.jsx
 │   │       │   ├── StaffManagement.jsx
-│   │       │   ├── AuditLogs.jsx
-│   │       │   └── Analytics.jsx
+│   │       │   ├── AuditLogs.jsx│   │       │
+│   │       ├── doctor/
+│   │       │   ├── DoctorDashboard.jsx
+│   │       │   ├── PatientList.jsx
+│   │       │   ├── Consultation.jsx
+│   │       │   ├── Prescriptions.jsx
+│   │       │   └── Discharge.jsx
 │   │       │
-│   │       ├── frontdesk/
+│   │       │   └── Analytics.jsx
+   │       │
+│   │   │    ├── frontdesk/
 │   │       │   ├── FrontDeskDashboard.jsx
 │   │       │   ├── PatientRegistration.jsx
 │   │       │   └── AppointmentScheduling.jsx
@@ -1285,14 +1292,7 @@ hms-frontend/
 │   │       │   ├── AssignedPatients.jsx
 │   │       │   ├── VitalsCapture.jsx
 │   │       │   └── BedStatus.jsx
-│   │       │
-│   │       ├── doctor/
-│   │       │   ├── DoctorDashboard.jsx
-│   │       │   ├── PatientList.jsx
-│   │       │   ├── Consultation.jsx
-│   │       │   ├── Prescriptions.jsx
-│   │       │   └── Discharge.jsx
-│   │       │
+
 │   │       └── patient/
 │   │           ├── PatientPortal.jsx
 │   │           ├── VisitHistory.jsx
@@ -1386,11 +1386,16 @@ hms-backend/
 │   │   │   │   ├── rules.model.js
 │   │   │   │   └── rules.routes.js
 │   │   │
-│   │   │   └── report-engine/
-│   │   │       ├── report.controller.js
-│   │   │       ├── report.service.js
-│   │   │       ├── report.model.js
-│   │   │       └── report.routes.js
+│   │   │   ├── rules-engine/
+│   │   │   │   ├── rules.controller.js
+│   │   │   │   ├── rules.service.js
+│   │   │   │   ├── rules.model.js
+│   │   │   │   └── rules.routes.js│   │   │
+│   │   │   ├── rules-engine/
+│   │   │   │   ├── rules.controller.js
+│   │   │   │   ├── rules.service.js
+│   │   │   │   ├── rules.model.js
+│   │   │   │   └── rules.routes.js
 │   │
 │   │   ├── patients/                   # PATIENT MASTER + VISITS
 │   │   │   ├── patient.controller.js
