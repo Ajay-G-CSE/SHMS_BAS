@@ -1345,3 +1345,113 @@ hms-frontend/
 ├── package.json
 ├── vite.config.js
 └── README.md
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+															VS CODING INSIDE OF IN BACKEND
+hms-backend/
+├── src/
+│   ├── app.js                          # Express app bootstrap
+│   ├── server.js                       # Server entry point
+│
+│   ├── config/                         # Configuration
+│   │   ├── db.js                       # DB connection
+│   │   ├── env.js                      # Environment variables
+│   │   └── logger.js                   # Logging setup
+│
+│   ├── modules/                        ⭐ CORE BUSINESS MODULES
+│   │
+│   │   ├── auth/                       # AUTH & RBAC
+│   │   │   ├── auth.controller.js
+│   │   │   ├── auth.service.js
+│   │   │   ├── auth.routes.js
+│   │   │   └── auth.middleware.js
+│   │
+│   │   ├── users/                      # STAFF + PATIENT USERS
+│   │   │   ├── user.controller.js
+│   │   │   ├── user.service.js
+│   │   │   ├── user.model.js
+│   │   │   └── user.routes.js
+│   │
+│   │   ├── lcnc/                       ⭐ LCNC CORE (MATCHES FRONTEND)
+│   │   │
+│   │   │   ├── form-engine/
+│   │   │   │   ├── form.controller.js
+│   │   │   │   ├── form.service.js
+│   │   │   │   ├── form.model.js
+│   │   │   │   └── form.routes.js
+│   │   │
+│   │   │   ├── rules-engine/
+│   │   │   │   ├── rules.controller.js
+│   │   │   │   ├── rules.service.js
+│   │   │   │   ├── rules.model.js
+│   │   │   │   └── rules.routes.js
+│   │   │
+│   │   │   └── report-engine/
+│   │   │       ├── report.controller.js
+│   │   │       ├── report.service.js
+│   │   │       ├── report.model.js
+│   │   │       └── report.routes.js
+│   │
+│   │   ├── patients/                   # PATIENT MASTER + VISITS
+│   │   │   ├── patient.controller.js
+│   │   │   ├── patient.service.js
+│   │   │   ├── patient.model.js
+│   │   │   └── patient.routes.js
+│   │
+│   │   ├── visits/                     # VISITS & WORKFLOWS
+│   │   │   ├── visit.controller.js
+│   │   │   ├── visit.service.js
+│   │   │   ├── visit.model.js
+│   │   │   └── visit.routes.js
+│   │
+│   │   ├── wards-beds/                 # WARD & BED MGMT
+│   │   │   ├── ward.controller.js
+│   │   │   ├── ward.service.js
+│   │   │   ├── ward.model.js
+│   │   │   └── ward.routes.js
+│   │
+│   │   ├── staff/                      # DOCTORS / NURSES
+│   │   │   ├── staff.controller.js
+│   │   │   ├── staff.service.js
+│   │   │   ├── staff.model.js
+│   │   │   └── staff.routes.js
+│   │
+│   │   ├── master-data/                # DROPDOWNS & CONFIG
+│   │   │   ├── master.controller.js
+│   │   │   ├── master.service.js
+│   │   │   ├── master.model.js
+│   │   │   └── master.routes.js
+│   │
+│   │   ├── audit/                      # AUDIT LOGS
+│   │   │   ├── audit.controller.js
+│   │   │   ├── audit.service.js
+│   │   │   ├── audit.model.js
+│   │   │   └── audit.routes.js
+│   │
+│   │   └── analytics/                  # DASHBOARD METRICS
+│   │       ├── analytics.controller.js
+│   │       ├── analytics.service.js
+│   │       └── analytics.routes.js
+│
+│   ├── middlewares/                    # GLOBAL MIDDLEWARE
+│   │   ├── auth.middleware.js
+│   │   ├── role.middleware.js
+│   │   ├── error.middleware.js
+│   │   └── requestLogger.middleware.js
+│
+│   ├── utils/                          # HELPERS
+│   │   ├── jwt.js
+│   │   ├── response.js
+│   │   ├── validators.js
+│   │   └── constants.js
+│
+│   ├── routes.js                       # ROUTE REGISTRY
+│   └── socket.js                       # REAL-TIME EVENTS
+│
+├── migrations/                         # DB MIGRATIONS
+├── seeders/                            # SAMPLE DATA
+├── tests/                              # API TESTS
+├── .env
+├── package.json
+├── README.md
+└── docker-compose.yml
