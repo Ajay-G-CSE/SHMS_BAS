@@ -1213,7 +1213,7 @@ Reports generated
 Data stored permanently
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-															VS CODING INSIDE OF IN FRONTEND
+															VS CODING INSIDE OF IN FRONTEND -- optional== loader.css
 hms-frontend/
 ├── public/
 │   ├── index.html
